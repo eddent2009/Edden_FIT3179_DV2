@@ -12,29 +12,60 @@
 <body>
 
   <!-- Main Header for the Homework -->
-  <h1>Data Visualisation 2/h1>
+  <h1>Data Visualisation 2</h1>
   
-  
+  <!-- Bar Chart Section -->
   <h2>Bar Chart: Count of Suburbs by Fluoridation Level</h2>
-  
   <div id="barchart"></div>
-
   
+  <!-- Map Visualization Section -->
   <h2>Map Visualization: Fluoridation Levels by Suburb in Victoria</h2>
-  
   <div id="pointmap"></div>
+  
+  <!-- Pie Chart Section -->
+  <h2>Pie Chart: Fluoridation by Water Company</h2>
+  <div id="piechart"></div>
 
+  <!-- Scatter Plot Section -->
+  <h2>Scatter Plot: Suburbs by Latitude and Longitude</h2>
+  <div id="scatter"></div>
+
+  <!-- Stacked Bar Chart Section -->
+  <h2>Stacked Bar Chart: Fluoridation Status by Water Company</h2>
+  <div id="stackbar"></div>
+
+  <!-- Embedding all visualizations -->
   <script type="text/javascript">
+    // Bar chart embed
     var spec3 = "js/barchart.vl.json";
     vegaEmbed('#barchart', spec3).then(function(result) {
       // Access the Vega view instance as result.view
     }).catch(console.error);
 
-   
+    // Point map embed
     var spec2 = "js/pointmap_fluoridation.vl.json";
     vegaEmbed('#pointmap', spec2).then(function(result) {
       // Access the Vega view instance as result.view
     }).catch(console.error);
+
+    // Pie chart embed
+    var specPie = "js/piechart.vl.json";
+    vegaEmbed('#piechart', specPie).then(function(result) {
+      // Access the Vega view instance as result.view
+    }).catch(console.error);
+
+    // Scatter plot embed
+    var specScatter = "js/scatter_interactive.vl.json";
+    vegaEmbed('#scatter', specScatter).then(function(result) {
+      // Access the Vega view instance as result.view
+    }).catch(console.error);
+
+    // Stacked bar chart embed
+    var specStack = "js/stackbar.vl.json";
+    vegaEmbed('#stackbar', specStack).then(function(result) {
+      // Access the Vega view instance as result.view
+    }).catch(console.error);
+
   </script>
 
 </body>
