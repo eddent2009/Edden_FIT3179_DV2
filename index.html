@@ -21,14 +21,14 @@
   <!-- Map Visualization Section -->
   <h2>Map Visualization: Fluoridation Levels by Suburb in Victoria</h2>
   <div id="pointmap"></div>
+
+  <!-- Scatter Plot Section (Moved after the point map) -->
+  <h2>Scatter Plot: Suburbs by Latitude and Longitude</h2>
+  <div id="scatter"></div>
   
   <!-- Pie Chart Section -->
   <h2>Pie Chart: Fluoridation by Water Company</h2>
   <div id="piechart"></div>
-
-  <!-- Scatter Plot Section -->
-  <h2>Scatter Plot: Suburbs by Latitude and Longitude</h2>
-  <div id="scatter"></div>
 
   <!-- Stacked Bar Chart Section -->
   <h2>Stacked Bar Chart: Fluoridation Status by Water Company</h2>
@@ -48,15 +48,15 @@
       // Access the Vega view instance as result.view
     }).catch(console.error);
 
-    // Pie chart embed
-    var specPie = "js/piechart.vl.json";
-    vegaEmbed('#piechart', specPie).then(function(result) {
+    // Scatter plot embed (Now after the point map)
+    var specScatter = "js/scatter_interactive.vl.json";
+    vegaEmbed('#scatter', specScatter).then(function(result) {
       // Access the Vega view instance as result.view
     }).catch(console.error);
 
-    // Scatter plot embed
-    var specScatter = "js/scatter_interactive.vl.json";
-    vegaEmbed('#scatter', specScatter).then(function(result) {
+    // Pie chart embed
+    var specPie = "js/piechart.vl.json";
+    vegaEmbed('#piechart', specPie).then(function(result) {
       // Access the Vega view instance as result.view
     }).catch(console.error);
 
