@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Import Vega & Vega-Lite -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.30.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.26.0"></script>
+  
+  <!-- Link to your CSS -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+</head>
+<body>
+
+  <!-- Main Header for the Homework -->
+  <h1>Week 10 Homework</h1>
+  
+  
+  <h2>Bar Chart: Count of Suburbs by Fluoridation Level</h2>
+  
+  <div id="barchart"></div>
+
+  
+  <h2>Map Visualization: Fluoridation Levels by Suburb in Victoria</h2>
+  
+  <div id="pointmap"></div>
+
+  <script type="text/javascript">
+    var spec3 = "js/wk10hw_visualization.vl.json";
+    vegaEmbed('#barchart', spec3).then(function(result) {
+      // Access the Vega view instance as result.view
+    }).catch(console.error);
+
+   
+    var spec2 = "js/pointmap_fluoridation.vl.json";
+    vegaEmbed('#pointmap', spec2).then(function(result) {
+      // Access the Vega view instance as result.view
+    }).catch(console.error);
+  </script>
+
+</body>
+</html>
