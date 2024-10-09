@@ -1,0 +1,74 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Fluoridation Status by Water Company",
+  "width": 700,
+  "height": 350,
+  "data": {
+    "url": "https://raw.githubusercontent.com/eddent2009/Edden_FIT3179_HW10/refs/heads/main/data/Fluoridation%20by%20postcode%20-%20Sheet1.csv",
+    "format": {"type": "csv"}
+  },
+  "params": [
+    {
+      "name": "Fluoride_Level_Selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Fluoridated",
+          "Natural fluoride",
+          "Not fluoridated",
+          "Partly fluoridated"
+        ],
+        "name": "Filter by Fluoride Level: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "filter": "Fluoride_Level_Selection == null || datum.fluoride_level == Fluoride_Level_Selection"
+    }
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "water_company",
+      "type": "nominal",
+      "axis": {"title": "Water Company"}
+    },
+    "y": {
+      "aggregate": "count",
+      "field": "townsuburb",
+      "type": "quantitative",
+      "axis": {"title": "Suburbs"}
+    },
+    "color": {
+      "field": "fluoride_level",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Fluoridated",
+          "Natural fluoride",
+          "Not fluoridated",
+          "Partly fluoridated"
+        ],
+        "range": ["#377eb8", "#008000", "#FF0000", "#ff7f00"]
+      },
+      "legend": {"title": "Fluoridation Level"}
+    },
+    "tooltip": [
+      {"field": "water_company", "type": "nominal", "title": "Water Company"},
+      {
+        "field": "fluoride_level",
+        "type": "nominal",
+        "title": "Fluoridation Level"
+      },
+      {
+        "field": "townsuburb",
+        "type": "quantitative",
+        "aggregate": "count",
+        "title": "Number of Suburbs"
+      }
+    ]
+  },
+  "config": {}
+}
