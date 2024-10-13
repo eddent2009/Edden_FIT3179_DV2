@@ -69,10 +69,16 @@
 
     // Point map embed
     var spec2 = "js/pointmap.vl.json";
-    vegaEmbed('#pointmap', spec2).then(function(result) {
-      // Access the Vega view instance as result.view
-    }).catch(console.error);
-
+    vegaEmbed('#pointmap', spec2, {"actions": false, "renderer": "canvas", "config": {"usermeta": {"zoomable": true}}}).then(function(result) {
+    // Enabling zooming/panning interaction
+    const view = result.view;
+    view.addEventListener('wheel', (event) => {
+      event.preventDefault();
+      const zoomFactor = event.deltaY * -0.01;
+      view.scale('projection', zoomFactor);
+      view.run();
+    });
+  }).catch(console.error);
     // Scatter plot embed
     var specScatter = "js/scatter_interactive.vl.json";
     vegaEmbed('#scatter', specScatter).then(function(result) {
