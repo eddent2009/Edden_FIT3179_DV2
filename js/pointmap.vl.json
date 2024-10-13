@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Fluoridation Levels by Suburb in Victoria",
-  "width": 800,
-  "height": 600,
+  "width": 750,
+  "height": 750,
   "projection": {
     "type": "mercator",
     "center": [144.9631, -37.8136],
@@ -58,5 +58,6 @@
       }
     }
   ],
-  "config": {}
+  "config": {},
+  "usermeta": {"zoomable": true}
 }
