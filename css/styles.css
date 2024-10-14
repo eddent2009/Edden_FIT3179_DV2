@@ -14,6 +14,16 @@ body {
   margin-top: 20px;
 }
 
+.fluoridation-box {
+  border: 2px solid #000; /* Black border */
+  background-color: #ffffff; /* White background */
+  padding: 20px; /* Adds space inside the box */
+  margin: 20px auto; /* Centers the box */
+  width: 80%; /* Controls the width of the box */
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1); /* Adds a shadow effect */
+  text-align: left;
+}
+
 .title-image {
   height: 80px;
   width: auto;
@@ -56,13 +66,5 @@ h2 {
   margin-top: 30px;
 }
 
-.fluoridation-box {
-  border: 2px solid #000; /* Black border */
-  background-color: #ffffff; /* White background */
-  padding: 20px; /* Adds space inside the box */
-  margin: 20px auto; /* Centers the box */
-  width: 80%; /* Controls the width of the box */
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1); /* Adds a shadow effect */
-  text-align: left;
-}
+
 
