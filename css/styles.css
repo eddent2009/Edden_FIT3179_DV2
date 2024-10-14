@@ -1,38 +1,37 @@
 /* General styling */
 body {
   font-family: Arial, sans-serif;
-  text-align: center;
-  line-height: 1.6;
   background-color: #ADD8E6;
 }
 
 /* Box for wrapping each section */
 .box {
-  border: 2px solid #000; /* Border around the box */
-  padding: 20px; /* Adds space inside the box */
-  margin: 20px auto; /* Centers the box */
-  width: 60%; /* Sets a consistent width for the boxes */
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1); /* Adds shadow effect */
+  border: 2px solid #000;
+  padding: 20px;
+  margin: 20px auto;
+  width: 60%;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Unique colors for each box */
 .fluoridation-box {
-  background-color: #EDE7F6; /* Light blue */
+  background-color: #EDE7F6;
 }
+
 .treemap-box {
-  background-color: #E3F2FD; /* Light blue */
+  background-color: #E3F2FD;
 }
 
 .map-box {
-  background-color: #FFF9C4; /* Light yellow */
+  background-color: #FFF9C4;
 }
 
 .barchart-box {
-  background-color: #FFECB3; /* Light orange */
+  background-color: #FFECB3;
 }
 
 .stackbar-box {
-  background-color: #FFCDD2; /* Light pink */
+  background-color: #FFCDD2;
 }
 
 /* Center the h2 heading */
@@ -41,28 +40,12 @@ h2 {
 }
 
 /* Left-align the description content */
-.content p {
-  text-align: left;
-  max-width: 90%; /* Adjusts width of the text block */
-  margin: 0 auto; /* Centers the text block */
-}
-
-.title-image {
-  height: 80px;
-  width: auto;
-  margin-right: 20px;
-}
-
-h1 {
-  font-size: 2.5em;
-}
-
-/* Set up for description formatting */
+.content p,
 p {
-  max-width: 600px;
+  text-align: left;
   margin: 0 auto;
-  text-align: justify;
   word-wrap: break-word;
+  max-width: 90%;
 }
 
 ul {
@@ -74,7 +57,7 @@ li {
   margin-bottom: 10px;
 }
 
-h2 {
-  font-size: 2em;
-  margin-top: 30px;
+h1 {
+  text-align: center;
+  font-size: 2.5em;
 }
