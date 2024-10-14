@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Fluoridation Levels by Suburb in Victoria",
+  "title": "Fluoridation Levels by Suburb in Victoria with Ocean",
   "width": 750,
   "height": 500,
   "projection": {
@@ -9,6 +9,13 @@
     "scale": {"expr": "zoom * 1000"}
   },
   "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/eddent2009/Edden_FIT3179_DV2/refs/heads/main/js/ne_110m_ocean%20(1).json",
+        "format": {"type": "json"}
+      },
+      "mark": {"type": "geoshape", "fill": "skyblue", "stroke": "none"}  // Ocean layer
+    },
     {
       "data": {
         "url": "https://raw.githubusercontent.com/eddent2009/Edden_FIT3179_DV2/refs/heads/main/js/vic_localities.json",
