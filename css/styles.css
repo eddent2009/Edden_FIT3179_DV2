@@ -38,6 +38,19 @@ p {
   word-wrap: break-word;
 }
 
+ul {
+  text-align: left; /* Ensure text is aligned properly */
+  list-style-position: inside; /* Ensures the bullets are inside */
+  margin: 0 auto; /* Centers the list */
+  padding-left: 0;
+  max-width: 600px; /* Control the width */
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+
 h2 {
   font-size: 2em;
   margin-top: 30px;
