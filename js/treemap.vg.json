@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
-  "title": "Fluoridation by Water Company",
+  "title": "Suburb Distribution by Water Company in Victoria",
   "width": 800,
   "height": 550,
   "padding": 5,
