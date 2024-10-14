@@ -11,7 +11,7 @@ body {
   border: 2px solid #000; /* Border around the box */
   padding: 20px; /* Adds space inside the box */
   margin: 20px auto; /* Centers the box */
-  width: 80%; /* Sets a consistent width for the boxes */
+  width: 60%; /* Sets a consistent width for the boxes */
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1); /* Adds shadow effect */
 }
 
