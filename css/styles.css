@@ -18,7 +18,10 @@ h2, p {
 }
 
 #pointmap {
-  margin-top: 10px; /* Reduce spacing above the map */
-  height: 800px;
-  width: 800px;
+    top: 100px;
+    margin-bottom: 0px; /* Adjust this to reduce space */
+}
+
+p {
+    margin-top: 10px; /* Reduce the space above the text */
 }
