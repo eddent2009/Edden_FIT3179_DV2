@@ -16,12 +16,11 @@
 
   <h2>Fluoridation Status in Victoria: A Comprehensive Data Visualization</h2>
   
-  <!-- Pie Chart Section (Now First) -->
-  <h2>Pie Chart: Fluoridation by Water Company</h2>
-  <div id="piechart"></div>
+  <!-- Treemap Section (Now First) -->
+  <h2>Treemap: Fluoridation by Water Company</h2>
+  <div id="treemap"></div>
   <p>
-    This pie chart shows the distribution of suburbs managed by various water companies and the status of their fluoridation. 
-    The size of each slice represents the number of suburbs managed by each water company. Hover over the chart to see the suburb count for each company.
+    This treemap shows the distribution of suburbs managed by different water companies. Each rectangle represents a water company, and its size is proportional to the number of suburbs they manage.
   </p>
 
   <!-- Map Visualization Section -->
@@ -31,15 +30,6 @@
     This map visualizes the fluoridation levels across different suburbs in Victoria. Each point represents a suburb, and the color coding 
     indicates the fluoridation level (Fluoridated, Natural Fluoride, Not Fluoridated, Partly Fluoridated). 
     This helps highlight regional differences in water fluoridation practices across the state.
-  </p>
-
-  <!-- Scatter Plot Section -->
-  <h2>Scatter Plot: Suburbs by Latitude and Longitude</h2>
-  <div id="scatter"></div>
-  <p>
-    This scatter plot displays the geographical spread of suburbs based on their latitude and longitude. 
-    The color represents the fluoridation level, allowing us to see the geographic patterns of fluoridation practices. 
-    The scatter plot also allows you to interactively explore how the fluoridation levels vary across Victoria.
   </p>
 
   <!-- Bar Chart Section -->
@@ -61,27 +51,15 @@
 
   <!-- Embedding all visualizations -->
   <script type="text/javascript">
-    // Pie chart embed (First in order now)
-    var specPie = "js/piechart.vl.json";
-    vegaEmbed('#piechart', specPie).then(function(result) {
+    // Treemap embed (Replacing Pie chart)
+    var specTree = "js/treemap.vg.json";
+    vegaEmbed('#treemap', specTree).then(function(result) {
       // Access the Vega view instance as result.view
     }).catch(console.error);
 
     // Point map embed
     var spec2 = "js/pointmap.vl.json";
-    vegaEmbed('#pointmap', spec2, {"actions": false, "renderer": "canvas", "config": {"usermeta": {"zoomable": true}}}).then(function(result) {
-    // Enabling zooming/panning interaction
-    const view = result.view;
-    view.addEventListener('wheel', (event) => {
-      event.preventDefault();
-      const zoomFactor = event.deltaY * -0.01;
-      view.scale('projection', zoomFactor);
-      view.run();
-    });
-  }).catch(console.error);
-    // Scatter plot embed
-    var specScatter = "js/scatter_interactive.vl.json";
-    vegaEmbed('#scatter', specScatter).then(function(result) {
+    vegaEmbed('#pointmap', spec2).then(function(result) {
       // Access the Vega view instance as result.view
     }).catch(console.error);
 
