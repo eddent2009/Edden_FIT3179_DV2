@@ -45,8 +45,9 @@ p {
   text-align: justify;
   margin: 0 auto;
   word-wrap: break-word;
-  max-width: 90%; /* Adjust width */
+  max-width: 500px; /* Adjust width to fit around 20 words per line */
   text-align-last: left; /* Forces the last line to be left-aligned */
+  line-height: 1.8; /* Increase line height for readability */
 }
 
 ul {
