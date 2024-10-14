@@ -6,30 +6,39 @@ body {
   background-color: #ADD8E6;
 }
 
-/* Header styling with image and title side by side */
-.header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
+/* Box for wrapping each section */
+.box {
+  border: 2px solid #000; /* Border around the box */
+  padding: 20px; /* Adds space inside the box */
+  margin: 20px auto; /* Centers the box */
+  width: 80%; /* Sets a consistent width for the boxes */
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1); /* Adds shadow effect */
 }
 
-.fluoridation-box {
-  border: 2px solid #000; /* Black border */
-  background-color: #E3F2FD; /* White background */
-  padding: 20px; /* Adds space inside the box */
-  margin: 10px auto; /* Centers the box */
-  width: 80%; /* Controls the width of the box */
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1); /* Adds a shadow effect */
+/* Unique colors for each box */
+.treemap-box {
+  background-color: #E3F2FD; /* Light blue */
+}
+
+.map-box {
+  background-color: #FFF9C4; /* Light yellow */
+}
+
+.barchart-box {
+  background-color: #FFECB3; /* Light orange */
+}
+
+.stackbar-box {
+  background-color: #FFCDD2; /* Light pink */
 }
 
 /* Center the h2 heading */
-.fluoridation-box h2 {
+h2 {
   text-align: center;
 }
 
 /* Left-align the description content */
-.fluoridation-box p, .fluoridation-box ul {
+.content p {
   text-align: left;
   max-width: 90%; /* Adjusts width of the text block */
   margin: 0 auto; /* Centers the text block */
