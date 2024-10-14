@@ -11,12 +11,12 @@ body {
   max-width: 800px;
 }
 
-/* Set up for 20 words per line */
+/* Set up for 15 words per line and center */
 .content {
-  max-width: 600px;
+  max-width: 600px; /* Adjust the width for 15 words per line */
   margin: 20px auto;
-  line-height: 1.8; /* You can adjust this for readability */
-  text-align: justify;
+  line-height: 1.8;
+  text-align: center;
   word-wrap: break-word;
 }
 
@@ -27,4 +27,8 @@ h1 {
 h2 {
   font-size: 2em;
   margin-top: 30px;
+}
+
+p {
+  text-align: center;
 }
