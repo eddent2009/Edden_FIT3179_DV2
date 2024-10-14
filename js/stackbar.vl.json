@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Distribution of Fluoridation Levels Across Water Companies in Victoria",
-  "width": 800,
-  "height": 550,
+  "width": 750,
+  "height": 500,
   "data": {
     "url": "https://raw.githubusercontent.com/eddent2009/Edden_FIT3179_HW10/refs/heads/main/data/Fluoridation%20by%20postcode%20-%20Sheet1.csv",
     "format": {"type": "csv"}
