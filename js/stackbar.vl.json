@@ -26,6 +26,9 @@
   "transform": [
     {
       "filter": "Fluoride_Level_Selection == 'All' || Fluoride_Level_Selection == null || datum.fluoride_level == Fluoride_Level_Selection"
+    },
+    {
+      "filter": "datum.water_company != 'Mount Buller and Mount Stirling ARMB' && datum.water_company != 'Mount Hotham ARMB'"
     }
   ],
   "layer": [
