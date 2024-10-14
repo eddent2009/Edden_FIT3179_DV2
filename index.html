@@ -11,11 +11,10 @@
 </head>
 <body>
 
-  <!-- Main Header for the Homework -->
+  <!-- Main Header -->
   <h1>Fluoridation Status in Victoria</h1>
 
-
-<!-- Box for "What is Water Fluoridation?" -->
+  <!-- Box for "What is Water Fluoridation?" -->
   <div class="fluoridation-box">
     <h2>What is Water Fluoridation?</h2>
     <p>
@@ -32,62 +31,53 @@
     </ul>
   </div>
 
+  <!-- Treemap Section in a Box -->
+  <div class="box treemap-box">
+    <h2>Treemap: Fluoridation by Water Company</h2>
+    <div id="treemap"></div>
+    <div class="content">
+      <p>
+        This treemap shows the distribution of suburbs managed by different water companies in Victoria. 
+        Each rectangle represents a water company, with the size of each rectangle proportional to the number of suburbs it manages.
+        Larger rectangles represent companies managing more suburbs, such as Yarra Valley Water and Barwon Water, while smaller ones represent companies like Coliban Water and Lower Murray Water.
+      </p>
+    </div>
+  </div>
 
+  <!-- Map Visualization Section in a Box -->
+  <div class="box map-box">
+    <h2>Map Visualization: Fluoridation Levels by Suburb in Victoria</h2>
+    <div id="pointmap"></div>
+    <p>
+      This map visualizes the fluoridation levels across different suburbs in Victoria. Each point represents a suburb, and the color coding indicates whether the water is fluoridated (Blue), naturally fluoridated (Green), not fluoridated (Red), or partly fluoridated (Orange).
+      Users can zoom in to explore the specific fluoridation details for each suburb.
+    </p>
+  </div>
 
+  <!-- Bar Chart Section in a Box -->
+  <div class="box barchart-box">
+    <h2>Bar Chart: Count of Suburbs by Fluoridation Level</h2>
+    <div id="barchart"></div>
+    <div class="content">
+      <p>
+        This bar chart visualizes the distribution of suburbs by water fluoridation levels in Victoria. 
+        The largest portion belongs to the Fluoridated category with 787 suburbs, while 256 suburbs fall under the Not fluoridated category.
+      </p>
+    </div>
+  </div>
 
-<!-- Treemap Section -->
-
-  <h2>Treemap: Fluoridation by Water Company</h2>
-  <div id="treemap"></div>
-<div class="content">
-  <p>
-    This treemap shows the distribution of suburbs managed by different water companies in Victoria. 
-    Each rectangle represents a water company, with the size of each rectangle proportional to the number of suburbs it manages. 
-    The larger the rectangle, the more suburbs a company serves. For example, companies like Yarra Valley Water and Barwon Water manage more suburbs compared to 
-    smaller water companies like Coliban Water or Lower Murray Water. 
-  </p>
-</div>
-
-<!-- Map Visualization Section -->
-
-  <h2>Map Visualization: Fluoridation Levels by Suburb in Victoria</h2>
-  <div id="pointmap"></div>
-
-  <p>
-    This map visualizes the fluoridation levels across different suburbs in Victoria. Each point represents a 
-    suburb, and the color coding indicates whether the water is fluoridated(Blue), naturally fluoridated(Green), not 
-    fluoridated(Red) and partly fluoridated(Orange). Users can zoom in to explore the specific fluoridation details for each suburb.
-  </p>
-</div>
-
-<!-- Bar Chart -->
-
-  <h2>Bar Chart: Count of Suburbs by Fluoridation Level</h2>
-  <div id="barchart"></div>
-<div class="content">
-  <p>
-  This bar chart visualizes the distribution of suburbs by water fluoridation levels in Victoria. 
-    The chart breaks down the number of suburbs according to four categories: Fluoridated, Natural fluoride, Not fluoridated, 
-    and Partly fluoridated. The largest portion, with 787 suburbs, belongs to the Fluoridated category, meaning fluoride is added to their water supply. 
-    256 suburbs fall under the Not fluoridated category, where no fluoride is added. 
-    The Natural fluoride and Partly fluoridated categories have significantly fewer suburbs. 
-    This chart helps assess the prevalence of fluoridation practices across the region.
-</p>
-</div>
-
-<!-- Stacked Bar Chart -->
-  <h2>Stacked Bar Chart: Fluoridation Status by Water Company</h2>
-  <div id="stackbar"></div>
-
-<div class="content"> 
-<p>
-  This bar chart displays the distribution of fluoridation levels across various water companies in Victoria. 
-  The chart breaks down the number of suburbs managed by each water company and shows the corresponding fluoridation status: fluoridated (blue), 
-  naturally fluoridated (green), not fluoridated (red), or partly fluoridated (orange). 
-  Each bar is stacked to represent the count of suburbs under each fluoridation level for each water company. 
-  Yarra Valley Water, for instance, manages the most suburbs with fluoridated water, while some companies manage a mix of fluoridation levels.
-</p>
-</div>
+  <!-- Stacked Bar Chart Section in a Box -->
+  <div class="box stackbar-box">
+    <h2>Stacked Bar Chart: Fluoridation Status by Water Company</h2>
+    <div id="stackbar"></div>
+    <div class="content">
+      <p>
+        This stacked bar chart displays the distribution of fluoridation levels across various water companies in Victoria. 
+        Each bar represents the number of suburbs managed by each water company, showing their corresponding fluoridation status: fluoridated, naturally fluoridated, not fluoridated, or partly fluoridated.
+        Yarra Valley Water manages the most suburbs with fluoridated water.
+      </p>
+    </div>
+  </div>
 
   <!-- Embedding all visualizations -->
   <script type="text/javascript">
