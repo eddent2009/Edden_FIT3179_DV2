@@ -11,12 +11,12 @@ body {
   max-width: 800px;
 }
 
-/* Set up for 15 words per line and center */
+/* Set up for 20 words per line for descriptions only */
 .content {
-  max-width: 600px; /* Adjust the width for 15 words per line */
+  max-width: 600px;
   margin: 20px auto;
   line-height: 1.8;
-  text-align: center;
+  text-align: justify;
   word-wrap: break-word;
 }
 
@@ -29,6 +29,10 @@ h2 {
   margin-top: 30px;
 }
 
+/* Centering and limiting words in descriptions */
 p {
-  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: justify;
+  word-wrap: break-word;
 }
