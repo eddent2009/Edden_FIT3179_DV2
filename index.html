@@ -8,6 +8,17 @@
   
   <!-- Link to your CSS -->
   <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+  <style>
+    /* Style to align bar and stacked bar charts side by side */
+    .chart-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .chart {
+      width: 48%;
+    }
+  </style>
 </head>
 <body>
 
@@ -15,17 +26,19 @@
   <h1>Fluoridation Status in Victoria</h1>
 
   <h2>What is Water Fluoridation?</h2>
+  <p>
+    Water fluoridation is the controlled addition of fluoride to public drinking water to prevent tooth decay.
+    Fluoride, a naturally occurring mineral, strengthens tooth enamel, making teeth more resistant to decay. Many communities add fluoride to their water 
+    supply as a public health initiative to reduce cavities, especially in children.
+    The levels of fluoride are categorized into 4 parts:
+  </p>
+  <ul>
+    <li><strong>Fluoridated:</strong> Fluoride is added to the water supply to meet health recommendations for preventing tooth decay.</li>
+    <li><strong>Natural Fluoride:</strong> Fluoride is naturally present in the water, without any artificial additions.</li>
+    <li><strong>Partly Fluoridated:</strong> Some areas within a region have fluoridated water, while others do not.</li>
+    <li><strong>Not Fluoridated:</strong> No fluoride is added to the water supply in this region.</li>
+  </ul>
 
-  <h3>Water fluoridation is the controlled addition of fluoride to public drinking water to prevent tooth decay. 
-  Fluoride, a naturally occurring mineral, strengthens tooth enamel, making teeth more resistant to decay. 
-  Many communities add fluoride to their water supply as a public health initiative to reduce cavities, especially in children.
-  The levels of fluoride are categorized into 4 part:
-    Fluoridated: Fluoride is added to the water supply to meet health recommendations for preventing tooth decay.
-    Natural Fluoride: Fluoride is naturally present in the water, without any artificial additions.
-    Partly Fluoridated: Some areas within a region have fluoridated water, while others do not.
-    Not Fluoridated: No fluoride is added to the water supply in this region.
-  </h3>
-  
   <!-- Treemap Section (Now First) -->
   <h2>Treemap: Fluoridation by Water Company</h2>
   <div id="treemap"></div>
@@ -42,26 +55,24 @@
     This helps highlight regional differences in water fluoridation practices across the state.
   </p>
 
-  <!-- Bar Chart Section -->
-  <h2>Bar Chart: Count of Suburbs by Fluoridation Level</h2>
-  <div id="barchart"></div>
+  <!-- Bar Chart and Stacked Bar Chart Side by Side -->
+  <div class="chart-container">
+    <div class="chart">
+      <h2>Bar Chart: Count of Suburbs by Fluoridation Level</h2>
+      <div id="barchart"></div>
+    </div>
+    <div class="chart">
+      <h2>Stacked Bar Chart: Fluoridation Status by Water Company</h2>
+      <div id="stackbar"></div>
+    </div>
+  </div>
   <p>
-    This bar chart provides a breakdown of the number of suburbs for each fluoridation level. It categorizes the suburbs based on whether their water 
-    is fluoridated, naturally fluoridated, not fluoridated, or partly fluoridated. This chart gives a clear overview of how widespread different fluoridation levels are across the region.
-  </p>
-
-  <!-- Stacked Bar Chart Section -->
-  <h2>Stacked Bar Chart: Fluoridation Status by Water Company</h2>
-  <div id="stackbar"></div>
-  <p>
-    This stacked bar chart shows the distribution of fluoridation levels across different water companies. 
-    Each bar represents a water company, and the colors within the bar indicate the number of suburbs served by the company under each fluoridation level. 
-    This visualization highlights which companies manage more fluoridated or non-fluoridated suburbs.
+    The bar chart provides a breakdown of the number of suburbs for each fluoridation level. The stacked bar chart shows the distribution of fluoridation levels across different water companies.
   </p>
 
   <!-- Embedding all visualizations -->
   <script type="text/javascript">
-    // Treemap embed (Replacing Pie chart)
+    // Treemap embed
     var specTree = "js/treemap.vg.json";
     vegaEmbed('#treemap', specTree).then(function(result) {
       // Access the Vega view instance as result.view
@@ -84,7 +95,6 @@
     vegaEmbed('#stackbar', specStack).then(function(result) {
       // Access the Vega view instance as result.view
     }).catch(console.error);
-
   </script>
 
 </body>
