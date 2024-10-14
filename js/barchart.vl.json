@@ -25,7 +25,7 @@
   ],
   "transform": [
     {
-      "filter": "Fluoride_Level_Selection == null || lower(trim(datum.fluoride_level)) == lower(trim(Fluoride_Level_Selection))"
+      "filter": "Fluoride_Level_Selection == 'All' || Fluoride_Level_Selection == null|| lower(trim(datum.fluoride_level)) == lower(trim(Fluoride_Level_Selection))"
     },
     {"filter": "datum.townsuburb != null"}
   ],
