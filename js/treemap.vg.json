@@ -1,0 +1,91 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "title": "Fluoridation by Water Company",
+  "width": 800,
+  "height": 550,
+  "padding": 5,
+  "data": [
+    {
+      "name": "tree",
+      "url": "https://raw.githubusercontent.com/eddent2009/Edden_FIT3179_DV2/refs/heads/main/data/Fluoridation%20by%20postcode%20-%20Sheet1.csv",
+      "format": {"type": "csv", "delimiter": ","},
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["water_company"],
+          "fields": ["townsuburb"],
+          "ops": ["count"],
+          "as": ["suburb_count"]
+        },
+        {"type": "nest", "keys": ["water_company"]},
+        {
+          "type": "treemap",
+          "field": "suburb_count",
+          "sort": {"field": "suburb_count", "order": "descending"},
+          "size": [{"signal": "width"}, {"signal": "height"}],
+          "paddingInner": 1
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "color",
+      "type": "ordinal",
+      "domain": {"data": "tree", "field": "water_company"},
+      "range": [
+        "#EF9A9A",
+        "#F48FB1",
+        "#CE93D8",
+        "#9575CD",
+        "#9FA8DA",
+        "#90CAF9",
+        "#4FC3F7",
+        "#80DEEA",
+        "#80CBC4",
+        "#A5D6A7",
+        "#C5E1A5",
+        "#E6EE9C",
+        "#FFF176",
+        "#FFD54F",
+        "#FFB74D",
+        "#FF8A65",
+        "#A1887F",
+        "#90A4AE"
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "type": "rect",
+      "from": {"data": "tree"},
+      "encode": {
+        "enter": {
+          "x": {"field": "x0"},
+          "y": {"field": "y0"},
+          "x2": {"field": "x1"},
+          "y2": {"field": "y1"},
+          "fill": {"scale": "color", "field": "water_company"},
+          "tooltip": {
+            "signal": "{'Water Company': datum.water_company, 'Suburb Count': datum.suburb_count}"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {"data": "tree"},
+      "encode": {
+        "enter": {
+          "x": {"field": "x0", "offset": 5},
+          "y": {"field": "y0", "offset": 13},
+          "text": {"field": "water_company"},
+          "fontSize": {"value": 10},
+          "fill": {"value": "black"}
+        },
+        "update": {"align": {"value": "left"}, "baseline": {"value": "top"}}
+      }
+    }
+  ],
+  "config": {}
+}
