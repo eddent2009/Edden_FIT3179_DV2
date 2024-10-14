@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
   "title": "Suburb Distribution by Water Company in Victoria",
-  "width": 800,
-  "height": 550,
+  "width": 750,
+  "height": 500,
   "padding": 5,
   "data": [
     {
