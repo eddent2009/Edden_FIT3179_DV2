@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Fluoridation Levels by Suburb in Victoria with Ocean",
+  "title": "Fluoridation Levels by Suburb in Victoria",
   "width": 750,
   "height": 500,
   "projection": {
