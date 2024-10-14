@@ -1,8 +1,22 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 #pointmap {
-	top:100px;
-	bottom: 100px; 
-	left: 100px;
-	right: 100px;
-	height: 1000px;
-	width: 800px;
+  height: 1000px;
+  width: 800px;
+}
+
+h1, h2, p {
+  margin: 10px 0;
 }
