@@ -33,6 +33,13 @@
       "transform": [
         {"type": "filter", "expr": "datum.water_company === 'Yarra Valley Water'"}
       ]
+    },
+    {
+      "name": "barwon_water",
+      "source": "tree",
+      "transform": [
+        {"type": "filter", "expr": "datum.water_company === 'Barwon Water'"}
+      ]
     }
   ],
   "scales": [
@@ -91,6 +98,38 @@
           "fill": {"value": "black"}
         },
         "update": {"align": {"value": "left"}, "baseline": {"value": "top"}}
+      }
+    },
+    {
+      "type": "text",
+      "from": {"data": "barwon_water"},
+      "encode": {
+        "enter": {
+          "x": {"field": "x0", "offset": 5},
+          "y": {"field": "y0", "offset": 50},
+          "text": {
+            "signal": "'Barwon Water manages'"
+          },
+          "fontSize": {"value": 12},
+          "fill": {"value": "black"},
+          "fontWeight": {"value": "bold"}
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {"data": "barwon_water"},
+      "encode": {
+        "enter": {
+          "x": {"field": "x0", "offset": 5},
+          "y": {"field": "y0", "offset": 65},
+          "text": {
+            "signal": "'the third-largest number of suburbs.'"
+          },
+          "fontSize": {"value": 12},
+          "fill": {"value": "black"},
+          "fontWeight": {"value": "bold"}
+        }
       }
     },
     {
