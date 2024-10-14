@@ -9,14 +9,9 @@
   <!-- Link to your CSS -->
   <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
   <style>
-    /* Style to align bar and stacked bar charts side by side */
+    /* Style to stack the bar and stacked bar charts vertically */
     .chart-container {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .chart {
-      width: 48%;
+      margin-bottom: 20px;
     }
   </style>
 </head>
@@ -39,7 +34,7 @@
     <li><strong>Not Fluoridated:</strong> No fluoride is added to the water supply in this region.</li>
   </ul>
 
-  <!-- Treemap Section (Now First) -->
+  <!-- Treemap Section -->
   <h2>Treemap: Fluoridation by Water Company</h2>
   <div id="treemap"></div>
   <p>
@@ -55,16 +50,16 @@
     This helps highlight regional differences in water fluoridation practices across the state.
   </p>
 
-  <!-- Bar Chart and Stacked Bar Chart Side by Side -->
+  <!-- Bar Chart -->
   <div class="chart-container">
-    <div class="chart">
-      <h2>Bar Chart: Count of Suburbs by Fluoridation Level</h2>
-      <div id="barchart"></div>
-    </div>
-    <div class="chart">
-      <h2>Stacked Bar Chart: Fluoridation Status by Water Company</h2>
-      <div id="stackbar"></div>
-    </div>
+    <h2>Bar Chart: Count of Suburbs by Fluoridation Level</h2>
+    <div id="barchart"></div>
+  </div>
+
+  <!-- Stacked Bar Chart -->
+  <div class="chart-container">
+    <h2>Stacked Bar Chart: Fluoridation Status by Water Company</h2>
+    <div id="stackbar"></div>
   </div>
   <p>
     The bar chart provides a breakdown of the number of suburbs for each fluoridation level. The stacked bar chart shows the distribution of fluoridation levels across different water companies.
