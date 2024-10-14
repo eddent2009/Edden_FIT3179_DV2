@@ -42,10 +42,11 @@ h2 {
 /* Left-align the description content */
 .content p,
 p {
-  text-align: left;
+  text-align: justify;
   margin: 0 auto;
   word-wrap: break-word;
-  max-width: 90%;
+  max-width: 90%; /* Adjust width */
+  text-align-last: left; /* Forces the last line to be left-aligned */
 }
 
 ul {
