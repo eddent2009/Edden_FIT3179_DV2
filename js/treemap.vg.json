@@ -17,6 +17,10 @@
           "ops": ["count"],
           "as": ["suburb_count"]
         },
+        {
+          "type": "filter",
+          "expr": "datum.suburb_count >= 5"
+        },
         {"type": "nest", "keys": ["water_company"]},
         {
           "type": "treemap",
