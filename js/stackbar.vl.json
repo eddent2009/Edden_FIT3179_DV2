@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Fluoridation Status by Water Company",
+  "title": "Distribution of Fluoridation Levels Across Water Companies in Victoria",
   "width": 700,
   "height": 350,
   "data": {
@@ -13,7 +13,7 @@
       "bind": {
         "input": "select",
         "options": [
-          null,
+          "All",
           "Fluoridated",
           "Natural fluoride",
           "Not fluoridated",
@@ -25,7 +25,7 @@
   ],
   "transform": [
     {
-      "filter": "Fluoride_Level_Selection == null || datum.fluoride_level == Fluoride_Level_Selection"
+      "filter": "Fluoride_Level_Selection == 'All' || Fluoride_Level_Selection == null|| datum.fluoride_level == Fluoride_Level_Selection"
     }
   ],
   "mark": "bar",
@@ -39,7 +39,7 @@
       "aggregate": "count",
       "field": "townsuburb",
       "type": "quantitative",
-      "axis": {"title": "Suburbs"}
+      "axis": {"title": "Number ofSuburbs"}
     },
     "color": {
       "field": "fluoride_level",
