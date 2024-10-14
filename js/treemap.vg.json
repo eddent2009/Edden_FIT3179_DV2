@@ -26,6 +26,13 @@
           "paddingInner": 1
         }
       ]
+    },
+    {
+      "name": "yarra_valley",
+      "source": "tree",
+      "transform": [
+        {"type": "filter", "expr": "datum.water_company === 'Yarra Valley Water'"}
+      ]
     }
   ],
   "scales": [
@@ -84,6 +91,37 @@
           "fill": {"value": "black"}
         },
         "update": {"align": {"value": "left"}, "baseline": {"value": "top"}}
+      }
+    },
+    {
+      "type": "text",
+      "from": {"data": "yarra_valley"},
+      "encode": {
+        "enter": {
+          "x": {"field": "x0", "offset": 5},
+          "y": {"field": "y0", "offset": 60},
+          "text": {
+            "signal": "'Yarra Valley Water manages the most suburbs.'"
+          },
+          "fontSize": {"value": 12},
+          "fill": {"value": "black"},
+          "fontWeight": {"value": "bold"}
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {"data": "yarra_valley"},
+      "encode": {
+        "enter": {
+          "x": {"field": "x0", "offset": 5},
+          "y": {"field": "y0", "offset": 40},
+          "text": {
+            "signal": "datum.suburb_count"
+          },
+          "fontSize": {"value": 12},
+          "fill": {"value": "black"}
+        }
       }
     }
   ],
