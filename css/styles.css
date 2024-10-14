@@ -17,7 +17,7 @@ body {
 .fluoridation-box {
   border: 2px solid #000; /* Black border */
   background-color: #E3F2FD; /* White background */
-  padding: 10px; /* Adds space inside the box */
+  padding: 20px; /* Adds space inside the box */
   margin: 10px auto; /* Centers the box */
   width: 80%; /* Controls the width of the box */
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1); /* Adds a shadow effect */
