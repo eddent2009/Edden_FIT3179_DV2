@@ -1,27 +1,30 @@
+/* General styling */
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  font-family: Arial, sans-serif;
   text-align: center;
+  line-height: 1.6;
 }
 
-h2, p {
-  margin: 5px 0; /* Reduce margin to reduce spacing */
+/* Center the charts */
+#treemap, #pointmap, #barchart, #stackbar {
+  margin: 0 auto;
+  max-width: 800px;
 }
 
-.chart-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px; /* Adjust the spacing below charts */
+/* Set up for 20 words per line */
+.content {
+  max-width: 600px;
+  margin: 20px auto;
+  line-height: 1.8; /* You can adjust this for readability */
+  text-align: justify;
+  word-wrap: break-word;
 }
 
-#pointmap {
-    top: 100px;
-    margin-bottom: 0px; /* Adjust this to reduce space */
+h1 {
+  font-size: 2.5em;
 }
 
-p {
-    margin-top: 10px; /* Reduce the space above the text */
+h2 {
+  font-size: 2em;
+  margin-top: 30px;
 }
