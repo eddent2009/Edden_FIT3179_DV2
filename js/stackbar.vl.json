@@ -25,50 +25,66 @@
   ],
   "transform": [
     {
-      "filter": "Fluoride_Level_Selection == 'All' || Fluoride_Level_Selection == null|| datum.fluoride_level == Fluoride_Level_Selection"
+      "filter": "Fluoride_Level_Selection == 'All' || Fluoride_Level_Selection == null || datum.fluoride_level == Fluoride_Level_Selection"
     }
   ],
-  "mark": "bar",
-  "encoding": {
-    "x": {
-      "field": "water_company",
-      "type": "nominal",
-      "axis": {"title": "Water Company"}
-    },
-    "y": {
-      "aggregate": "count",
-      "field": "townsuburb",
-      "type": "quantitative",
-      "axis": {"title": "Number ofSuburbs"}
-    },
-    "color": {
-      "field": "fluoride_level",
-      "type": "nominal",
-      "scale": {
-        "domain": [
-          "Fluoridated",
-          "Natural fluoride",
-          "Not fluoridated",
-          "Partly fluoridated"
-        ],
-        "range": ["#377eb8", "#008000", "#FF0000", "#ff7f00"]
-      },
-      "legend": {"title": "Fluoridation Level"}
-    },
-    "tooltip": [
-      {"field": "water_company", "type": "nominal", "title": "Water Company"},
-      {
-        "field": "fluoride_level",
-        "type": "nominal",
-        "title": "Fluoridation Level"
-      },
-      {
-        "field": "townsuburb",
-        "type": "quantitative",
-        "aggregate": "count",
-        "title": "Number of Suburbs"
+  "layer": [
+    {
+      "mark": "bar",
+      "encoding": {
+        "x": {
+          "field": "water_company",
+          "type": "nominal",
+          "axis": {"title": "Water Company"}
+        },
+        "y": {
+          "aggregate": "count",
+          "field": "townsuburb",
+          "type": "quantitative",
+          "axis": {"title": "Number of Suburbs"}
+        },
+        "color": {
+          "field": "fluoride_level",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Fluoridated",
+              "Natural fluoride",
+              "Not fluoridated",
+              "Partly fluoridated"
+            ],
+            "range": ["#377eb8", "#008000", "#FF0000", "#ff7f00"]
+          },
+          "legend": {"title": "Fluoridation Level"}
+        }
       }
-    ]
-  },
-  "config": {}
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "dy": -10,
+        "fontSize": 12,
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "x": {
+          "field": "water_company",
+          "type": "nominal"
+        },
+        "y": {
+          "aggregate": "count",
+          "field": "townsuburb",
+          "type": "quantitative"
+        },
+        "text": {
+          "aggregate": "count",
+          "field": "townsuburb",
+          "type": "quantitative"
+        },
+        "color": {"value": "black"}
+      }
+    }
+  ]
 }
