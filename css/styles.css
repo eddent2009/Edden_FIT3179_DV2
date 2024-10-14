@@ -39,11 +39,11 @@ p {
 }
 
 ul {
-  text-align: left; /* Ensure text is aligned properly */
-  list-style-position: inside; /* Ensures the bullets are inside */
+  list-style-position: inside;
+  text-align: center;
+  padding-left: 0; /* Ensures no extra space on the left */
+  display: inline-block; /* Aligns the list inline */
   margin: 0 auto; /* Centers the list */
-  padding-left: 0;
-  max-width: 600px; /* Control the width */
 }
 
 li {
