@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 800,
-  "height": 400,
+  "width": 700,
+  "height": 350,
   "title": "Distribution of Suburbs by Water Fluoridation Levels",
   "data": {
     "url": "https://raw.githubusercontent.com/eddent2009/Edden_FIT3179_DV2/refs/heads/main/data/Fluoridation%20by%20postcode%20-%20Sheet1.csv",
