@@ -13,6 +13,7 @@ body {
   margin: 20px auto; /* Centers the box */
   width: 80%; /* Sets a consistent width for the boxes */
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1); /* Adds shadow effect */
+  background-color: #EDE7F6
 }
 
 /* Unique colors for each box */
