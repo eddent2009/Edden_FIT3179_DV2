@@ -14,7 +14,7 @@
         "url": "https://raw.githubusercontent.com/eddent2009/Edden_FIT3179_DV2/refs/heads/main/js/ne_110m_ocean%20(1).json",
         "format": {"type": "json"}
       },
-      "mark": {"type": "geoshape", "fill": "skyblue", "stroke": "none"}  // Ocean layer
+      "mark": {"type": "geoshape", "fill": "skyblue", "stroke": "none"}
     },
     {
       "data": {
