@@ -3,6 +3,25 @@ body {
   font-family: Arial, sans-serif;
   text-align: center;
   line-height: 1.6;
+  background-color: #ADD8E6; /* Light blue background */
+}
+
+/* Header styling with image and title side by side */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.title-image {
+  height: 80px;
+  width: auto;
+  margin-right: 20px;
+}
+
+h1 {
+  font-size: 2.5em;
 }
 
 /* Center the charts */
@@ -11,28 +30,15 @@ body {
   max-width: 800px;
 }
 
-/* Set up for 20 words per line for descriptions only */
-.content {
-  max-width: 600px;
-  margin: 20px auto;
-  line-height: 1.8;
-  text-align: justify;
-  word-wrap: break-word;
-}
-
-h1 {
-  font-size: 2.5em;
-}
-
-h2 {
-  font-size: 2em;
-  margin-top: 30px;
-}
-
-/* Centering and limiting words in descriptions */
+/* Set up for description formatting */
 p {
   max-width: 600px;
   margin: 0 auto;
   text-align: justify;
   word-wrap: break-word;
+}
+
+h2 {
+  font-size: 2em;
+  margin-top: 30px;
 }
