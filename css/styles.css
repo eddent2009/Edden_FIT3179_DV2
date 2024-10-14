@@ -50,6 +50,15 @@ p {
   line-height: 1.8; /* Increase line height for readability */
 }
 
+/* Center visualizations */
+#treemap, #pointmap, #barchart, #stackbar {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%; /* Adjust to your desired width */
+  max-width: 750px; /* Max width for the visualizations */
+}
+
 ul {
   list-style-position: inside;
   padding-left: 0;
