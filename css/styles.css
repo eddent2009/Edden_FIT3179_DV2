@@ -1,7 +1,7 @@
 /* General styling */
 body {
   font-family: Arial, sans-serif;
-  background-color: #ADD8E6;
+  background-color: #E3F2FD;
 }
 
 /* Box for wrapping each section */
@@ -15,19 +15,19 @@ body {
 
 /* Unique colors for each box */
 .fluoridation-box {
-  background-color: #EDE7F6;
+  background-color: #E8EAF6;
 }
 
 .treemap-box {
-  background-color: #E3F2FD;
+  background-color: #E1F5FE;
 }
 
 .map-box {
-  background-color: #FFF9C4;
+  background-color: #E0F7FA;
 }
 
 .barchart-box {
-  background-color: #FFECB3;
+  background-color: #EDE7F6;
 }
 
 .stackbar-box {
