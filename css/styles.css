@@ -78,7 +78,18 @@ li {
   height: auto;
 }
 
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center both the image and the title */
+}
+
+.title-image {
+  height: 50px; /* Adjust the height of the image */
+  margin-right: 15px; /* Space between the image and the title */
+}
+
 h1 {
-  text-align: center;
   font-size: 2.5em;
+  text-align: center;
 }
