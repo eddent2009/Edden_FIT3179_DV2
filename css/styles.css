@@ -94,3 +94,20 @@ h1 {
   font-size: 2.5em;
   text-align: center;
 }
+
+#l-align {
+    text-align: left;
+    
+}
+
+.container2 {
+    width: 80%; /* or fixed width, depending on your design needs */
+    margin: auto;
+    background: #fff;
+    border: 2px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    padding-left: 20px;  /* 50 pixels padding on the left */
+    padding-right: 20px; /* 50 pixels padding on the right */
+    margin-bottom: 5em;
+}
