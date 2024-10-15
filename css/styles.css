@@ -69,12 +69,13 @@ p {
 
 
 ul {
-  text-align: justify;
-  margin: 0 auto;
-  max-width: 90%; /* Align with the description width */
-  padding-left: 50px; /* Adds space to the left */
   list-style-position: inside;
+  margin: 0 auto;
+  padding-left: 0;
+  text-align: justify;
+  max-width: 500px; /* Same width as the paragraph */
 }
+
 
 li {
   margin-bottom: 10px;
