@@ -1,7 +1,7 @@
 /* General styling */
 body {
   font-family: Arial, sans-serif;
-  background-color: #E3F2FD;
+  background-color: #B3E5FC;
 }
 
 /* Box for wrapping each section */
@@ -27,7 +27,7 @@ body {
 }
 
 .barchart-box {
-  background-color: #EDE7F6;
+  background-color: #E3F2FD;
 }
 
 .stackbar-box {
