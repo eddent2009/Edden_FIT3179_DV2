@@ -39,7 +39,7 @@ h2 {
   text-align: center;
 }
 
-/* Left-align the description content */
+/* Center and align the description and list content */
 .content p,
 p {
   text-align: justify;
@@ -48,6 +48,17 @@ p {
   max-width: 500px; /* Adjust width to fit around 20 words per line */
   text-align-last: left; /* Forces the last line to be left-aligned */
   line-height: 1.8; /* Increase line height for readability */
+}
+
+/* Adjust the list styling */
+ul {
+  list-style-position: inside;
+  margin-left: 0; /* Remove margin for alignment */
+  padding-left: 0; /* Remove padding to align with the description */
+}
+
+li {
+  margin-bottom: 10px;
 }
 
 /* Center visualizations */
@@ -66,30 +77,6 @@ p {
   max-width: 100%;  /* Prevent it from overflowing */
   height: auto;
 }
-
-
-/* Left-align the description and list content */
-.content p,
-ul {
-  text-align: justify;
-  margin: 0 auto;
-  word-wrap: break-word;
-  max-width: 500px; /* Adjust width to fit around 20 words per line */
-  text-align-last: left; /* Forces the last line to be left-aligned */
-  line-height: 1.8; /* Increase line height for readability */
-  padding-left: 20px; /* Added padding to align bullet points with the description */
-}
-
-ul {
-  list-style-position: inside;
-  padding-left: 20px; /* Ensure bullets align with the paragraph */
-}
-
-li {
-  margin-bottom: 10px;
-}
-
-
 
 h1 {
   text-align: center;
