@@ -72,7 +72,7 @@ ul {
   text-align: justify;
   margin: 0 auto;
   max-width: 90%; /* Align with the description width */
-  padding-left: 20px; /* Adds space to the left */
+  padding-left: 50px; /* Adds space to the left */
   list-style-position: inside;
 }
 
