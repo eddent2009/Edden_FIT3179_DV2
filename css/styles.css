@@ -53,7 +53,7 @@ p {
 /* Adjust the list styling */
 ul {
   list-style-position: inside;
-  margin-left: 500; /* Remove margin for alignment */
+  margin-left: 500px; /* Remove margin for alignment */
   
 }
 
