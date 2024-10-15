@@ -8,6 +8,22 @@
     "center": [145, -38],
     "scale": {"expr": "zoom * 1000"}
   },
+  "params": [
+    {
+      "name": "Fluoride_Level_Selection",
+      "value": "All",
+      "bind": {
+        "input": "select",
+        "options": ["All", "Fluoridated", "Natural fluoride", "Not fluoridated", "Partly fluoridated"],
+        "name": "Filter by Fluoride Level: "
+      }
+    },
+    {
+      "name": "zoom",
+      "value": 2.8,
+      "bind": {"input": "range", "min": 1, "max": 50, "step": 0.1, "name": "Zoom level"}
+    }
+  ],
   "layer": [
     {
       "data": {
@@ -35,6 +51,11 @@
         "url": "https://raw.githubusercontent.com/eddent2009/Edden_FIT3179_DV2/refs/heads/main/data/Fluoridation%20by%20postcode%20-%20Sheet1.csv",
         "format": {"type": "csv"}
       },
+      "transform": [
+        {
+          "filter": "Fluoride_Level_Selection == 'All' || datum.fluoride_level == Fluoride_Level_Selection"
+        }
+      ],
       "mark": "circle",
       "encoding": {
         "longitude": {"field": "lon", "type": "quantitative"},
@@ -44,12 +65,7 @@
           "field": "fluoride_level",
           "type": "nominal",
           "scale": {
-            "domain": [
-              "Fluoridated",
-              "Natural fluoride",
-              "Not fluoridated",
-              "Partly fluoridated"
-            ],
+            "domain": ["Fluoridated", "Natural fluoride", "Not fluoridated", "Partly fluoridated"],
             "range": ["#377eb8", "#008000", "#FF0000", "#ff7f00"]
           },
           "legend": {"title": "Fluoridation Level"}
@@ -64,13 +80,5 @@
         ]
       }
     }
-  ],
-  "params": [
-    {
-      "name": "zoom",
-      "value": 2.8,
-      "bind": {"input": "range", "min": 1, "max": 50, "step": 0.1, "name": "Zoom level"}
-    }
   ]
-  
 }
