@@ -53,8 +53,8 @@ p {
 /* Adjust the list styling */
 ul {
   list-style-position: inside;
-  margin-left: 0; /* Remove margin for alignment */
-  padding-left: 0; /* Remove padding to align with the description */
+  margin-left: 500; /* Remove margin for alignment */
+  
 }
 
 li {
