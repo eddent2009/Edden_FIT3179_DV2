@@ -39,43 +39,23 @@ h2 {
   text-align: center;
 }
 
-/* Center and align the description and list content */
-.content p,
-p {
+/* Align paragraph and bullet points */
+p, ul {
   text-align: justify;
+  max-width: 550px;
   margin: 0 auto;
-  word-wrap: break-word;
-  max-width: 500px; /* Adjust width to fit around 20 words per line */
-  text-align-last: left; /* Forces the last line to be left-aligned */
-  line-height: 1.8; /* Increase line height for readability */
+  line-height: 1.6;
 }
 
-/* Adjust the list styling */
+/* Styling for the bullet points */
 ul {
-  list-style-position: inside;
-  margin-left: 500px; /* Remove margin for alignment */
-  
+  padding-left: 0;
+  list-style-position: outside;
+  margin-left: 40px;
 }
 
 li {
   margin-bottom: 10px;
-}
-
-/* Center visualizations */
-#treemap{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%; /* Reduce the width to give more room */
-  max-width: 750px; /* Ensure the charts fit within the container */
-  box-sizing: border-box;
-}
-
-/* Ensure visualizations fit inside the box without centering */
-#pointmap, #barchart, #stackbar {
-  width: 100%;  /* Ensure the visualization takes full width inside the box */
-  max-width: 100%;  /* Prevent it from overflowing */
-  height: auto;
 }
 
 h1 {
