@@ -55,7 +55,7 @@ p {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 100%; /* Adjust to your desired width */
+  width: 60%; /* Adjust to your desired width */
   max-width: 750px; /* Max width for the visualizations */
 }
 
