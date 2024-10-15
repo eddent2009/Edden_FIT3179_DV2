@@ -68,18 +68,27 @@ p {
 }
 
 
+/* Left-align the description and list content */
+.content p,
 ul {
-  list-style-position: inside;
-  margin: 0 auto;
-  padding-left: 0;
   text-align: justify;
-  max-width: 500px; /* Same width as the paragraph */
+  margin: 0 auto;
+  word-wrap: break-word;
+  max-width: 500px; /* Adjust width to fit around 20 words per line */
+  text-align-last: left; /* Forces the last line to be left-aligned */
+  line-height: 1.8; /* Increase line height for readability */
+  padding-left: 20px; /* Added padding to align bullet points with the description */
 }
 
+ul {
+  list-style-position: inside;
+  padding-left: 20px; /* Ensure bullets align with the paragraph */
+}
 
 li {
   margin-bottom: 10px;
 }
+
 
 
 h1 {
